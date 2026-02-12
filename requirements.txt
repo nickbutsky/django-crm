@@ -28,3 +28,4 @@
     yarl==1.22.0
 
 psycopg[binary]==3.3.2
+pydantic-settings==2.12.0
