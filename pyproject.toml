@@ -1,3 +1,8 @@
+[project]
+name = "django-crm"
+dynamic = ["version"]
+requires-python = "==3.14.2"
+
 [build-system]
 requires = ['setuptools>=40.9.0']
 build-backend = 'setuptools.build_meta'
