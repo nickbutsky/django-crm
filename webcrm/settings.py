@@ -27,15 +27,15 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 DATABASES = {
     'default': {
         # for SQLite3
-        'ENGINE': 'django.db.backends.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
 
         # for MySQl
         #'ENGINE': 'django.db.backends.mysql',
         #'PORT': '3306',
 
         # for PostgreSQL
-        # "ENGINE": "django.db.backends.postgresql",
-        # 'PORT': '5432',
+        "ENGINE": "django.db.backends.postgresql",
+        'PORT': '5432',
 
         'NAME': 'crm_db',
         'USER': 'crm_user',
