@@ -7,6 +7,7 @@ from crm.settings import *          # NOQA
 from common.settings import *       # NOQA
 from tasks.settings import *        # NOQA
 from voip.settings import *         # NOQA
+from webcrm.setting import Setting
 from .datetime_settings import *    # NOQA
 
 # ---- Django settings ---- #
@@ -18,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # To get new value of key use code:
 # from django.core.management.utils import get_random_secret_key
 # print(get_random_secret_key())
-SECRET_KEY = 'j1c=6$s-dh#$ywt@(q4cm=j&0c*!0x!e-qm6k1%yoliec(15tn'
+SECRET_KEY = Setting.django_secret_key
 
 # Add your hosts to the list.
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
@@ -35,12 +36,12 @@ DATABASES = {
 
         # for PostgreSQL
         "ENGINE": "django.db.backends.postgresql",
-        'PORT': '5432',
+        'PORT': Setting.postgres_port,
 
-        'NAME': 'crm_db',
-        'USER': 'crm_user',
-        'PASSWORD': 'crmpass',
-        'HOST': 'localhost',
+        'NAME': Setting.postgres_db,
+        'USER': Setting.postgres_user,
+        'PASSWORD': Setting.postgres_password,
+        'HOST': Setting.postgres_host,
     }
 }
 
